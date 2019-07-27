@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 // #define GLUT_DISABLE_ATEXIT_HACK 
 #include "gl/glew.h"
 #include <iostream>
 
-// ·â×°Ò»¸öGLSL×ÅÉ«¹ÜÏß
-// ¿Î³ÌÔ´ÂëÀï°á¹ıÀ´µÄ
+// å°è£…ä¸€ä¸ªGLSLç€è‰²ç®¡çº¿
+// è¯¾ç¨‹æºç é‡Œæ¬è¿‡æ¥çš„
 class CGLShader {
 protected:
     GLhandleARB programObject;
@@ -24,8 +24,8 @@ private:
 };
 
 
-// RAII£¬´ú±í¶ÔÒ»¸ö×ÅÉ«Æ÷µÄÁÙÊ±Ê¹ÓÃ
-// ¹¹ÔìÊ±µ÷ÓÃenable()£¬Îö¹¹Ê±µ÷ÓÃdisable()
+// RAIIï¼Œä»£è¡¨å¯¹ä¸€ä¸ªç€è‰²å™¨çš„ä¸´æ—¶ä½¿ç”¨
+// æ„é€ æ—¶è°ƒç”¨enable()ï¼Œææ„æ—¶è°ƒç”¨disable()
 template<typename Ptr>
 class CGLShaderUsage {
     Ptr _shader;
@@ -48,7 +48,7 @@ public:
     }
 };
 
-// ·â×°CGLShaderUsageµÄ¹¹Ôìº¯Êı£¬Ê¹Æä±ãÓÚµ÷ÓÃ
+// å°è£…CGLShaderUsageçš„æ„é€ å‡½æ•°ï¼Œä½¿å…¶ä¾¿äºè°ƒç”¨
 template<typename Ptr>
 inline CGLShaderUsage<Ptr> use_shader(Ptr shader) {
     return CGLShaderUsage<Ptr>(shader);

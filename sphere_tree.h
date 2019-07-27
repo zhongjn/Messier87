@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "gl/glew.h"
 #include "glm/vec3.hpp"
 #include "glm/glm.hpp"
@@ -7,9 +7,9 @@
 #include <stack>
 
 // ********************************
-// ¿Õ¼äSphere Tree£¬ÓÃÓÚ¼ÓËÙÇó½»
-// ÏÖÔÚ»¹Ã»ÊµÏÖÍêGPU°æ±¾
-// Ö®ºó¿ÉÒÔÓÃÔÚºÚ¶´ÖÜÎ§µÄÁ£×ÓÏÔÊ¾ÉÏ
+// ç©ºé—´Sphere Treeï¼Œç”¨äºåŠ é€Ÿæ±‚äº¤
+// ç°åœ¨è¿˜æ²¡å®ç°å®ŒGPUç‰ˆæœ¬
+// ä¹‹åå¯ä»¥ç”¨åœ¨é»‘æ´å‘¨å›´çš„ç²’å­æ˜¾ç¤ºä¸Š
 // ********************************
 
 using namespace std;
@@ -223,7 +223,7 @@ public:
     };
 };
 
-// ²âÊÔ³ÌĞò
+// æµ‹è¯•ç¨‹åº
 int main2() {
     // vec3 v = vec3();
     vector<Sphere> spheres;

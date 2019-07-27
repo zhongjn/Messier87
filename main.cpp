@@ -1,4 +1,4 @@
-#include "common.h"
+﻿#include "common.h"
 #include "bloom.h"
 #include "draw_texture.h"
 #include "blackhole.h"
@@ -10,8 +10,8 @@
 int blackhole_samples_index = 0;
 vector<int> blackhole_samples = { 1, 2, 4, 8 };
 
-// ����Ч��
-// ���ڴ��ڸı��Сʱ����resize()
+// 所有效果
+// 便于窗口改变大小时调用resize()
 vector<Effect*> effects;
 
 BlackholeEffect* ef_blackhole;
@@ -181,7 +181,7 @@ int main(int argc, char** argv)
         printf("Error: %s\n", glewGetErrorString(err));
     }
 
-    // ��ʼ��Ч��
+    // 初始化效果
     effects.push_back(ef_blackhole = new BlackholeEffect());
     effects.push_back(ef_bloom = new BloomEffect());
     effects.push_back(ef_draw_tex = new DrawTextureEffect());
@@ -198,25 +198,25 @@ int main(int argc, char** argv)
 
 
     printf("\n");
-    printf("1. ����ʲô��\n");
-    printf("    ����һ�����ڣ����ƣ���������۵�ʷ�����ڶ�ģ����������۲쵽������Ť�����Ǻڶ�Ť���˹�����ɵģ��ⱻ��Ϊ����͸��ЧӦ��\n");
+    printf("1. 这是什么？\n");
+    printf("    这是一个基于（近似）广义相对论的史瓦西黑洞模拟程序。你所观察到的物体扭曲，是黑洞扭曲了光线造成的；这被称为引力透镜效应。\n");
 
     printf("\n");
-    printf("2. ��β�����\n");
-    printf("    WASDZX - �ƶ���ͷ\n");
-    printf("    IJKLUO - ��ת��ͷ\n");
-    printf("    �ո� - ������ͷ�ٶ�\n");
-    printf("    NM - ��/������ݱ���\n");
+    printf("2. 如何操作？\n");
+    printf("    WASDZX - 移动镜头\n");
+    printf("    IJKLUO - 旋转镜头\n");
+    printf("    空格 - 减缓镜头速度\n");
+    printf("    NM - 减/增抗锯齿倍数\n");
 
     printf("\n");
-    printf("3. ע\n");
-    printf("    �������½���ʾ������ڶ��ľ��룬����RsΪ�¼��ӽ�İ뾶��\n");
-    printf("    R=3.00Rsʱ���㴦����ڵ��ȶ�������������ڰ뾶����������\n");
-    printf("    R=1.50Rsʱ���㴦�ڹ��ӵĻ��ƹ����������ܿ���ˮƽ�ĺڶ���Ӱ������㱾�����������Կ����Լ��ĺ����ס�\n");
-    printf("    R=1.00Rsʱ���㴦���¼��ӽ��ϡ���Ϊ����һ�����Ƶ�ģ�⣬���Ի����ڴ�ʱ�Ѿ�ʧ�档ʵ������ǡ�����������������壬��ô����һ���������㲻�ᷢ���Լ��������¼��ӽ磻���������ͼ������Ժڶ���ֹ����ô��ֻ����Զ��ڶ��ķ��򿴵�һ���⡣\n");
+    printf("3. 注\n");
+    printf("    窗口左下角显示了你与黑洞的距离，其中Rs为事件视界的半径。\n");
+    printf("    R=3.00Rs时，你处于最靠内的稳定轨道（吸积盘内半径等于它）。\n");
+    printf("    R=1.50Rs时，你处于光子的环绕轨道，因此你能看到水平的黑洞阴影。如果你本人在那里，你可以看到自己的后脑勺。\n");
+    printf("    R=1.00Rs时，你处于事件视界上。因为这是一个近似的模拟，所以画面在此时已经失真。实际情况是——如果你在自由落体，那么画面一切正常，你不会发现自己穿过了事件视界；而如果你试图保持相对黑洞静止，那么你只能在远离黑洞的方向看到一束光。\n");
     
     printf("\n");
-    printf("4. ����\n");
+    printf("4. 作者\n");
     printf("    https://github.com/zhongjn\n");
 
     glutMainLoop();

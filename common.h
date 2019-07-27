@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
@@ -20,42 +20,42 @@
 using namespace std;
 using namespace glm;
 
-// ÏòÁ¿³¤¶ÈµÄÆ½·½
+// å‘é‡é•¿åº¦çš„å¹³æ–¹
 inline float length2(vec3 v) { return dot(v, v); }
 
-// ´°¿Ú´óĞ¡
+// çª—å£å¤§å°
 i32vec2 resolution_2i();
 
-// ´°¿Ú´óĞ¡
+// çª—å£å¤§å°
 vec3 resolution_3f();
 
-// Æô¶¯ÖÁ½ñµÄÊ±¼ä
+// å¯åŠ¨è‡³ä»Šçš„æ—¶é—´
 float time();
 
-// ¼ÓÔØÒ»¸öÎÆÀí
+// åŠ è½½ä¸€ä¸ªçº¹ç†
 void load_texture(GLuint* tex_id, char* filename);
 
 void load_cubemap(GLuint* tex_id, const vector<char*>& files);
 
-// ´´½¨Ö¡»º³åÇø
+// åˆ›å»ºå¸§ç¼“å†²åŒº
 void create_framebuffer(GLuint* framebuffer, GLuint* framebuffer_tex, int w, int h);
 
-// ÉèÖÃ´óĞ¡
-// ÔÚ´°¿ÚĞÎ×´±»¸Ä±äÊ±µ÷ÓÃ
+// è®¾ç½®å¤§å°
+// åœ¨çª—å£å½¢çŠ¶è¢«æ”¹å˜æ—¶è°ƒç”¨
 void _set_geometry(int x, int y, int z, int w);
 
-// ÉèÖÃ¿ªÊ¼¼ÆÊ±
-// ÔÚ³ÌĞòÆô¶¯Ê±µ÷ÓÃ
+// è®¾ç½®å¼€å§‹è®¡æ—¶
+// åœ¨ç¨‹åºå¯åŠ¨æ—¶è°ƒç”¨
 void _set_time_start();
 
-// ´ú±íÒ»¸öÍ¼ĞÎĞ§¹û
+// ä»£è¡¨ä¸€ä¸ªå›¾å½¢æ•ˆæœ
 class Effect {
 public:
     virtual void resize() {};
 };
 
-// °üº¬¹ãÒåÏà¶ÔÂÛµÄÎïÀíÄ£ĞÍ
-// ÓÃÓÚ¼ÆËãºÚ¶´¸½½üÎïÌåµÄ¼ÓËÙ¶È
+// åŒ…å«å¹¿ä¹‰ç›¸å¯¹è®ºçš„ç‰©ç†æ¨¡å‹
+// ç”¨äºè®¡ç®—é»‘æ´é™„è¿‘ç‰©ä½“çš„åŠ é€Ÿåº¦
 class SchwarzschildMetric {
     float _mass;
 public:
@@ -64,18 +64,18 @@ public:
     float r_photon_sphere() { return 1.5* r_event_horizon(); }
     float r_isco() { return 3 * r_event_horizon(); };
 
-    // »¹Ã»²âÊÔ¹ı
+    // è¿˜æ²¡æµ‹è¯•è¿‡
     vec3 get_accel(vec3 r, vec3 v) {
         vec3 c = cross(r, v);
-        float d¦È = length(c) / length2(r);
+        float dÎ¸ = length(c) / length2(r);
         float dr = length2(r) / length2(r);
-        float dd¦È = -2 * dr * d¦È / length(r);
-        float ddr = -_mass / length2(r) + (length(r) - 3 * _mass) * powf(d¦È, 2);
+        float ddÎ¸ = -2 * dr * dÎ¸ / length(r);
+        float ddr = -_mass / length2(r) + (length(r) - 3 * _mass) * powf(dÎ¸, 2);
         vec3 plane = normalize(c);
         vec3 basis_x = normalize(r);
         vec3 basis_y = cross(plane, basis_x);
-        float acc_x = ddr - length(r) * powf(d¦È, 2);
-        float acc_y = length(r) * dd¦È + 2 * dr + d¦È;
+        float acc_x = ddr - length(r) * powf(dÎ¸, 2);
+        float acc_y = length(r) * ddÎ¸ + 2 * dr + dÎ¸;
         return basis_x * acc_x + basis_y * acc_y;
     }
 

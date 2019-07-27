@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "common.h"
 #include "glm/gtc/type_ptr.hpp"
 
@@ -44,7 +44,7 @@ namespace impl {
     };
 }
 
-// »æÖÆºÚ¶´
+// ç»˜åˆ¶é»‘æ´
 class BlackholeEffect : public Effect {
     GLuint framebuffer = 0;
     GLuint framebuffer_tex = 0;
@@ -62,14 +62,14 @@ public:
         blackhole_shader = new impl::BlackholeShader("shader/blackhole_adisc.glslf");
     }
 
-    // ´°¿Ú¸Ä±ä´óĞ¡Ê±µ÷ÓÃ
-    // ÖØĞÂ´´½¨Ö¡»º³åÇø
+    // çª—å£æ”¹å˜å¤§å°æ—¶è°ƒç”¨
+    // é‡æ–°åˆ›å»ºå¸§ç¼“å†²åŒº
     void resize() {
         blackhole_framebuffer_init();
     }
 
-    // ½«ºÚ¶´»æÖÆµ½ÎÆÀíÉÏ
-    // ·µ»ØÎÆÀíid
+    // å°†é»‘æ´ç»˜åˆ¶åˆ°çº¹ç†ä¸Š
+    // è¿”å›çº¹ç†id
     GLuint render_texture(const mat4& cam_mat, int samples) {
         glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
         auto shader = use_shader(blackhole_shader);

@@ -1,4 +1,4 @@
-#include "common.h"
+﻿#include "common.h"
 
 double geometry[4] = { 800, 600, 0, 0 };
 clock_t tick_start;

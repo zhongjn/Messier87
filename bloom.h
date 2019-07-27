@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "common.h"
 
 // hide the shader names
@@ -57,7 +57,7 @@ namespace impl {
     };
 }
 
-// »æÖÆ»Ô¹âĞ§¹û
+// ç»˜åˆ¶è¾‰å…‰æ•ˆæœ
 class BloomEffect : public Effect {
 
     GLuint
@@ -96,7 +96,7 @@ public:
     }
     GLuint render_texture(GLuint tex_origin) {
 
-        // Éú³Émipmap
+        // ç”Ÿæˆmipmap
         glBindFramebuffer(GL_FRAMEBUFFER, bloom_mipmap_framebuffer);
         {
             auto shader = use_shader(bloom_gen_mipmap_shader);
@@ -104,7 +104,7 @@ public:
             glRectf(-1.0, -1.0, 1.0, 1.0);
         }
 
-        // ºáÏò¸ßË¹Ä£ºı
+        // æ¨ªå‘é«˜æ–¯æ¨¡ç³Š
         glBindFramebuffer(GL_FRAMEBUFFER, bloom_gaussian_h_framebuffer);
         {
             auto shader = use_shader(bloom_gaussian_h_shader);
@@ -112,7 +112,7 @@ public:
             glRectf(-1.0, -1.0, 1.0, 1.0);
         }
 
-        // ×İÏò¸ßË¹Ä£ºı
+        // çºµå‘é«˜æ–¯æ¨¡ç³Š
         glBindFramebuffer(GL_FRAMEBUFFER, bloom_gaussian_v_framebuffer);
         {
             auto shader = use_shader(bloom_gaussian_v_shader);
@@ -120,7 +120,7 @@ public:
             glRectf(-1.0, -1.0, 1.0, 1.0);
         }
 
-        // ²ÉÑùÊä³ö
+        // é‡‡æ ·è¾“å‡º
         glBindFramebuffer(GL_FRAMEBUFFER, bloom_out_framebuffer);
         {
             auto shader = use_shader(bloom_shader);

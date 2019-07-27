@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "common.h"
 
 // hide the shader names
@@ -20,7 +20,7 @@ namespace impl {
     };
 }
 
-// »æÖÆÒ»¸öÎÆÀí£¬Ê¹Æä³äÂúÆÁÄ»
+// ç»˜åˆ¶ä¸€ä¸ªçº¹ç†ï¼Œä½¿å…¶å……æ»¡å±å¹•
 class DrawTextureEffect : public Effect {
     impl::DrawTextureShader* draw_texture_shader;
 

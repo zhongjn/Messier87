@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.8)
+ï»¿cmake_minimum_required (VERSION 3.8)
 
 set(src_all
     blackhole
@@ -11,20 +11,20 @@ set(src_all
     sphere_tree
 )
 
-# Ìí¼ÓÔ´ÎÄ¼ş
+# æ·»åŠ æºæ–‡ä»¶
 add_executable (Messier87 ${src_all})
 
 set(targets
     Messier87
 )
 
-# Òª¸´ÖÆµ½Ö´ĞĞÄ¿Â¼µÄÎÄ¼ş
+# è¦å¤åˆ¶åˆ°æ‰§è¡Œç›®å½•çš„æ–‡ä»¶
 set(copy_files
     gl/glut32.dll
     gl/glew32.dll
 )
 
-# Òª¸´ÖÆµ½Ö´ĞĞÄ¿Â¼µÄÄ¿Â¼
+# è¦å¤åˆ¶åˆ°æ‰§è¡Œç›®å½•çš„ç›®å½•
 set(copy_diretories
     texture
     shader
