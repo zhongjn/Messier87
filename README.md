@@ -23,28 +23,28 @@ For more physically realistic result, check the "Physical background 1" in refer
 
 ## Default scene
 
-![default1](./img/default1.png)
+<img src="./img/default1.png" width="500"/>
 
-![default2](./img/default2.png)
+<img src="./img/default2.png" width="500"/>
 
 
 ## A closer look
 
-![closer1](./img/closer1.png)
+<img src="./img/closer1.png" width="500"/>
 
-![closer2](./img/closer2.png)
+<img src="./img/closer2.png" width="500"/>
 
-![closer3](./img/closer3.png)
+<img src="./img/closer3.png" width="500"/>
 
 
 ## Near the photon sphere
 
-![near_photon_sphere](./img/near_photon_sphere.png)
+<img src="./img/near_photon_sphere.png" width="500"/>
 
 
 ## The Einstein Ring
 
-![ring](./img/ring.png)
+<img src="./img/ring.png" width="500"/>
 
 
 # References
