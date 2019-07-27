@@ -1,6 +1,6 @@
 #pragma once
 // #define GLUT_DISABLE_ATEXIT_HACK 
-#include <GL/glew.h>
+#include "gl/glew.h"
 #include <iostream>
 
 // 封装一个GLSL着色管线
